@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ─── SPLASH SCREEN ─── */
-
   const splash       = document.getElementById('splash-screen');
   const progressBar  = document.getElementById('progressBar');
   const progressText = document.getElementById('progressText');
   const loadingText  = document.getElementById('loadingText');
+
+  if (!splash) return;
 
   const loadingMessages = [
     'Preparando tu espacio de lectura...',
@@ -18,21 +18,36 @@ document.addEventListener('DOMContentLoaded', () => {
   let progress = 0;
   let msgIndex = 0;
 
-  // bloquear scroll mientras carga
+  // Bloquear scroll mientras carga
   document.body.style.overflow = 'hidden';
+
+  // ── Función que oculta el splash definitivamente ──
+  function hideSplash() {
+    splash.classList.add('hide');
+    document.body.style.overflow = '';
+    // Después de la transición lo sacamos del flujo
+    setTimeout(() => {
+      splash.style.display = 'none';
+    }, 1100);
+  }
+
+  // ── Failsafe: máximo 5 segundos pase lo que pase ──
+  const failsafe = setTimeout(() => {
+    clearInterval(splashInterval);
+    progressBar.style.width = '100%';
+    progressText.textContent = '100%';
+    hideSplash();
+  }, 5000);
 
   const splashInterval = setInterval(() => {
 
     progress += Math.floor(Math.random() * 12) + 5;
+    if (progress > 100) progress = 100;
 
-    if (progress > 100) {
-      progress = 100;
-    }
-
-    progressBar.style.width = `${progress}%`;
+    progressBar.style.width  = `${progress}%`;
     progressText.textContent = `${progress}%`;
 
-    // cambiar texto
+    // Rotar mensajes
     if (
       progress > (msgIndex + 1) * 15 &&
       msgIndex < loadingMessages.length - 1
@@ -41,18 +56,15 @@ document.addEventListener('DOMContentLoaded', () => {
       loadingText.textContent = loadingMessages[msgIndex];
     }
 
-    // finalizar
+    // Al llegar al 100%
     if (progress >= 100) {
-
       clearInterval(splashInterval);
+      clearTimeout(failsafe);
+      loadingText.textContent = loadingMessages[loadingMessages.length - 1];
 
       setTimeout(() => {
-
-        splash.classList.add('hide');
-
-        document.body.style.overflow = '';
-
-      }, 700);
+        hideSplash();
+      }, 600);
     }
 
   }, 180);
