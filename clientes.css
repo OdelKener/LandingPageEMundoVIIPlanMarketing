@@ -349,7 +349,7 @@
 }
 .form__group input[type="number"]::-webkit-inner-spin-button,
 .form__group input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
-.form__group input[type="number"] { -moz-appearance: textfield; }
+/* .form__group input[type="number"] { -moz-appearance: textfield; } */
 
 /* Acciones paso 2 */
 .form__actions {
