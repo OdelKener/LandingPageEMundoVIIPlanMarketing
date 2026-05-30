@@ -2,7 +2,7 @@
 //  GRUPO SABER — DashboardCatalago.js
 // ════════════════════════════════════════════════════
 
-const WA_NUMBER = "5057887 5960";
+const WA_NUMBER = "50578875960";
 
 // ── DATA ──────────────────────────────────────────
 const biblias = [

@@ -131,24 +131,19 @@
   position: relative;
   z-index: 2;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 90px;
+  height: 90px;
 
-  width: 110px;
-  height: 110px;
+  background-image: url('Image/LogoEMundo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 
-  font-size: 2rem;
-  font-weight: 900;
-  font-family: var(--font-display);
+  filter:
+    drop-shadow(0 0 12px rgba(0,146,186,.18));
 
-  color: #0092BA;
-
-  text-shadow:
-    0 0 10px rgba(0,146,186,.4),
-    0 0 20px rgba(0,146,186,.2);
-
-  animation: logoFloatFade 4s ease-in-out infinite;
+  animation:
+    logoFloatFade 4s ease-in-out infinite;
 }
 
 /* ════════════════════════════════════════════════════
@@ -341,12 +336,28 @@
 
 @media (max-width: 600px) {
 
-  .splash-logo {
-    width: 90px;
-    height: 90px;
-    font-size: 1.6rem;
+  .splash-ring {
+    width: 150px;
+    height: 150px;
   }
 
+  .splash-ring::before {
+    width: 128px;
+    height: 128px;
+  }
+
+  .splash-logo {
+    width: 72px;
+    height: 72px;
+  }
+
+  .splash-title {
+    font-size: 2rem;
+  }
+
+  .splash-loading-text {
+    font-size: .85rem;
+  }
 }
 
 /* ════════════════════════════════════════════════════

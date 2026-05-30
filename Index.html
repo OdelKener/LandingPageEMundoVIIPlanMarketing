@@ -7,51 +7,33 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,900;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="splash.css" />
   <link rel="stylesheet" href="Style.css" />
-  <link rel="stylesheet" href="clientes.css" />
+  <link rel="stylesheet" href="splash.css" />
+  <link rel="stylesheet" href="clientes.css">
+  <link rel="stylesheet" href="dashboard-catalago.css">
 </head>
 <body>
 
 
+  <!--SPLASH SCREEN-->
 
-  <header class="navbar" id="navbar">
-    <div class="navbar__inner">
+<div id="splash-screen">
 
-      <a href="#inicio" class="navbar__brand">
-        <img src="Image/LogoEMundo.png" alt="Ediciones Mundo" class="navbar__logo-img" />
-        <span class="navbar__name">Ediciones Mundo</span>
-      </a>
-
-      <nav class="navbar__links" id="navLinks">
-        <a href="#nosotros">Nosotros</a>
-        <a href="#mision">Visi&oacute;n y Misi&oacute;n</a>
-        <a href="#valores">Valores</a>
-        <a href="#informacion">Informaci&oacute;n</a>
-      </nav>
-
-      <button class="navbar__hamburger" id="hamburger" aria-label="Abrir men&uacute;">
-        <span></span><span></span><span></span>
-      </button>
-
-    </div>
-  </header>
-
-  <div id="splash-screen">
   <div class="splash-container">
 
-    <!-- Anillo giratorio — se cierra solo aquí -->
+    <!-- círculo -->
     <div class="splash-ring">
-      <div class="splash-logo">EMundo</div>
+      <div class="splash-logo"></div>
     </div>
 
-    <!-- Textos FUERA del anillo -->
-    <h1 class="splash-title"></h1>
+    <!-- textos -->
+    <h1 class="splash-title">Ediciones Mundo</h1>
 
     <p class="splash-loading-text" id="loadingText">
       Preparando conocimiento...
     </p>
 
+    <!-- barra -->
     <div class="splash-progress">
       <div class="splash-progress-bar" id="progressBar"></div>
     </div>
@@ -59,15 +41,41 @@
     <span class="splash-percent" id="progressText">0%</span>
 
   </div>
- </div>
 
+</div>
+
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="#inicio" class="navbar__brand">
+        <div class="navbar__logo-slot" title="Espacio para logo">
+          <span class="navbar__logo-text"></span>
+        </div>
+        <span class="navbar__name">EMundo</span>
+      </a>
+      <nav class="navbar__links" id="navLinks">
+        <a href="#nosotros">Nosotros</a>
+        <a href="#mision">Visión y Misión</a>
+        <a href="#valores">Valores</a>
+        <a href="#informacion">Información</a>
+        <a href="#cliente">Cliente</a>
+      </nav>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
 
   <main>
 
-    <!-- ══════════════════════════════════════
-         HERO
-    ══════════════════════════════════════ -->
+    <!-- HERO -->
     <section class="hero" id="inicio">
+      <!--
+        ===================================================
+        IMAGEN DE FONDO INSTITUCIONAL
+        Para agregar tu imagen edita en style.css:
+          .hero { background-image: url('tu-imagen.jpg'); }
+        ===================================================
+      -->
       <div class="hero__overlay"></div>
       <div class="hero__content reveal">
         <p class="hero__eyebrow">Editorial &middot; Centroam&eacute;rica &middot; Desde 2000</p>
@@ -85,10 +93,7 @@
       </div>
     </section>
 
-
-    <!-- ══════════════════════════════════════
-         QUIÉNES SOMOS
-    ══════════════════════════════════════ -->
+    <!-- QUIENES SOMOS -->
     <section class="section nosotros" id="nosotros">
       <div class="section__inner">
         <div class="nosotros__text">
@@ -108,126 +113,112 @@
       </div>
     </section>
 
-
-    <!-- ══════════════════════════════════════
-         GALERÍA
-    ══════════════════════════════════════ -->
+    <!-- GALERIA -->
     <section class="gallery-section" id="gallerySection" aria-hidden="true">
-      <div class="section__inner">
-        <div class="gallery__grid">
+  <div class="section__inner">
+    <p class="gallery__hint">Imágenes institucionales</p>
+    <div class="gallery__grid">
 
-          <div class="gallery__card gallery__card--large">
-            <img src="Image/EificoEMundo.png" alt="Edificio Ediciones Mundo" class="gallery__img" />
-          </div>
-
-          <div class="gallery__card">
-            <img src="Image/dentro1.png" alt="Foto institucional 2" class="gallery__img" />
-          </div>
-
-          <div class="gallery__card">
-            <img src="Image/dentro2.png" alt="Foto institucional 3" class="gallery__img" />
-          </div>
-
-          <div class="gallery__card">
-            <img src="Image/dentro3.png" alt="Foto institucional 4" class="gallery__img" />
-          </div>
-
-          <div class="gallery__card">
-            <img src="Image/LogoEMundo.png" alt="Logo Ediciones Mundo" class="gallery__img" />
-          </div>
-
-        </div>
+      <div class="gallery__card gallery__card--large">
+        <img src="Image/EificoEMundo.png" alt="Edificio Ediciones Mundo" class="gallery__img" />
       </div>
-    </section>
 
+      <div class="gallery__card">
+        <img src="Image/dentro1.png" alt="Foto institucional 2" class="gallery__img" />
+      </div>
 
-    <!-- ══════════════════════════════════════
-         MISIÓN Y VISIÓN
-    ══════════════════════════════════════ -->
+      <div class="gallery__card">
+        <img src="Image/dentro2.png" alt="Foto institucional 3" class="gallery__img" />
+      </div>
+
+      <div class="gallery__card">
+        <img src="Image/dentro3.png" alt="Foto institucional 4" class="gallery__img" />
+      </div>
+
+      <div class="gallery__card">
+        <img src="Image/LogoEMundo.png" alt="Logo Ediciones Mundo" class="gallery__img" />
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- MISION Y VISION -->
     <section class="section mv" id="mision">
       <div class="section__inner">
         <span class="section__label reveal" style="text-align:center;display:block;">&#8212; Misi&oacute;n y Visi&oacute;n</span>
         <h2 class="section__title reveal" style="text-align:center;">Comprometidos con<br /><em>la Sociedad.</em></h2>
         <div class="mv__cards">
-
           <div class="mv__card reveal">
             <div class="mv__card-tag">Misi&oacute;n</div>
+            
             <h3>Nuestra Misi&oacute;n</h3>
             <p>Consolidar nuestra presencia en el mercado de libros, materiales autodid&aacute;cticos y publicaciones especiales, siendo referente de calidad y buen servicio, generando beneficios integrales tanto a nuestros clientes como a nuestra compa&ntilde;&iacute;a.</p>
             <div class="mv__card-bar"></div>
           </div>
-
           <div class="mv__card reveal">
             <div class="mv__card-tag">Visi&oacute;n</div>
+         
             <h3>Nuestra Visi&oacute;n</h3>
             <p>Somos la editorial L&iacute;der Regional con enfoque nacional que ofrece conocimiento, aprendizaje y liderazgo a nuestro mercado, mediante una oferta variada, original y con gran contenido de valor.</p>
             <div class="mv__card-bar"></div>
           </div>
-
         </div>
       </div>
     </section>
 
-
-    <!-- ══════════════════════════════════════
-         VALORES
-    ══════════════════════════════════════ -->
+    <!-- VALORES -->
     <section class="section valores" id="valores">
       <div class="section__inner">
         <span class="section__label reveal">&#8212; Nuestros valores</span>
         <h2 class="section__title reveal">Lo que nos<br /><em>define.</em></h2>
         <div class="valores__grid">
-
           <div class="valor__card reveal">
             <div class="valor__card-num">01</div>
+            
             <h3>Responsabilidad</h3>
             <p>Asumimos cada tarea con seriedad y profesionalismo, cumpliendo nuestros compromisos y contribuyendo al desarrollo educativo y organizacional de manera eficiente y sostenible.</p>
           </div>
-
           <div class="valor__card reveal">
             <div class="valor__card-num">02</div>
+            
             <h3>Transparencia</h3>
             <p>Manejamos nuestros procesos y relaciones con claridad y apertura, promoviendo la confianza mediante decisiones honestas, informaci&oacute;n precisa y una gesti&oacute;n &eacute;tica en cada &aacute;rea.</p>
           </div>
-
           <div class="valor__card reveal">
             <div class="valor__card-num">03</div>
+           
             <h3>Lealtad</h3>
             <p>Construimos relaciones s&oacute;lidas y duraderas basadas en la confianza, el respeto y el apoyo mutuo con nuestros colaboradores, clientes y socios comerciales.</p>
           </div>
-
           <div class="valor__card reveal">
             <div class="valor__card-num">04</div>
+          
             <h3>Honestidad</h3>
             <p>Actuamos con integridad y &eacute;tica en todas nuestras acciones, manteniendo una comunicaci&oacute;n clara y sincera que fortalezca la confianza de quienes trabajan con nosotros.</p>
           </div>
-
           <div class="valor__card reveal">
             <div class="valor__card-num">05</div>
+          
             <h3>Compromiso</h3>
             <p>Cumplimos con responsabilidad cada una de nuestras metas y obligaciones, garantizando atenci&oacute;n eficiente, productos de calidad y soluciones que aporten valor al sector educativo.</p>
           </div>
-
           <div class="valor__card reveal">
             <div class="valor__card-num">06</div>
+          
             <h3>Pasi&oacute;n</h3>
             <p>Trabajamos con entusiasmo y dedicaci&oacute;n en cada proyecto, impulsando el acceso a la educaci&oacute;n y al conocimiento, innovando constantemente para brindar un servicio de calidad.</p>
           </div>
-
         </div>
       </div>
     </section>
 
-
-    <!-- ══════════════════════════════════════
-         INFORMACIÓN + MAPAS
-    ══════════════════════════════════════ -->
+    <!-- INFORMACION + MAPAS -->
     <section class="section informacion" id="informacion">
       <div class="section__inner">
         <span class="section__label reveal">&#8212; Informaci&oacute;n</span>
         <h2 class="section__title reveal">Todo lo que necesitas<br /><em>saber sobre nosotros.</em></h2>
 
-        <!-- Horario -->
         <div class="horario reveal">
           <div class="horario__label">
             <span>&#128336;</span>
@@ -246,7 +237,6 @@
           </div>
         </div>
 
-        <!-- Sedes + Mapas -->
         <div class="sedes__grid">
 
           <!-- Nicaragua -->
@@ -318,7 +308,7 @@
             </div>
           </div>
 
-          <!-- Panamá -->
+          <!-- Panama -->
           <div class="sede reveal">
             <div class="sede__header">
               <span class="sede__flag">&#127477;&#127462;</span>
@@ -344,197 +334,212 @@
       </div>
     </section>
 
+    <!-- ══════════════════════════════════════════════════
+     BOTÓN FLOTANTE — Registro de Clientes
+     Pégalo antes del cierre </body>
+══════════════════════════════════════════════════ -->
+<div class="registro-wrap">
+  <a href="#cliente" class="btn-registro" id="btnFloatRegistro">
+    <span class="btn-registro__icon">📝</span>
+    <span>Registrarme</span>
+  </a>
+</div>
 
-    <!-- ══════════════════════════════════════
-         REGISTRO DE CLIENTES
-    ══════════════════════════════════════ -->
-    <section id="cliente" class="section section--clientes">
-      <div class="section__inner">
 
-        <header class="section__header reveal">
-          <h2 class="section__title">Registro de Clientes</h2>
-          <p class="section__subtitle">Completa la informaci&oacute;n y cu&eacute;ntanos tu experiencia</p>
-        </header>
+<!-- ══════════════════════════════════════════════════
+     SECCIÓN REGISTRO DE CLIENTES
+     Reemplaza tu <section id="cliente"> actual
+══════════════════════════════════════════════════ -->
+<section id="cliente" class="section section--clientes">
+  <div class="section__inner">
 
-        <!-- Indicador de pasos -->
-        <div class="form-steps reveal">
-          <div class="form-step active" id="step1">
-            <div class="form-step__bubble"><span>1</span></div>
-            <span class="form-step__label">Tu opini&oacute;n</span>
-          </div>
-          <div class="form-step-line">
-            <div class="form-step-line-fill" id="stepLineFill"></div>
-          </div>
-          <div class="form-step" id="step2">
-            <div class="form-step__bubble"><span>2</span></div>
-            <span class="form-step__label">Tus datos</span>
-          </div>
+    <!-- Encabezado -->
+    <header class="section__header reveal">
+      <h2 class="section__title">Registro de Clientes</h2>
+      <p class="section__subtitle">Completa la información y cuéntanos tu experiencia</p>
+    </header>
+
+    <!-- Indicador de pasos -->
+    <div class="form-steps reveal">
+      <div class="form-step active" id="step1">
+        <div class="form-step__bubble" id="stepBubble1"><span>1</span></div>
+        <span class="form-step__label">Tu opinión</span>
+      </div>
+      <div class="form-step-line">
+        <div class="form-step-line-fill" id="stepLineFill"></div>
+      </div>
+      <div class="form-step" id="step2">
+        <div class="form-step__bubble" id="stepBubble2"><span>2</span></div>
+        <span class="form-step__label" id="stepLabel2">Tus datos</span>
+      </div>
+    </div>
+
+    <!-- Tarjeta principal -->
+    <div class="clientes__card reveal">
+
+      <!-- ══ PASO 1 — Mini encuesta ══ -->
+      <div class="form-panel active" id="panelEncuesta">
+
+        <div class="encuesta__intro">
+          <h3>💬 Queremos conocerte mejor</h3>
+          <p>Tus respuestas nos ayudan a mejorar. Son rápidas y anónimas.</p>
         </div>
 
-        <!-- Tarjeta principal -->
-        <div class="clientes__card reveal">
+        <div class="encuesta__list">
 
-          <!-- PASO 1 — Mini encuesta -->
-          <div class="form-panel active" id="panelEncuesta">
+          <!-- Pregunta 1 -->
+          <div class="encuesta__item">
+            <p class="encuesta__question">
+              <span class="encuesta__question-num">1</span>
+              ¿Qué te parecen los precios de nuestras Biblias?
+            </p>
+            <div class="encuesta__options">
+              <span class="encuesta__chip" data-group="precios" data-value="muy_accesibles">😊 Muy accesibles</span>
+              <span class="encuesta__chip" data-group="precios" data-value="accesibles">👍 Accesibles</span>
+              <span class="encuesta__chip" data-group="precios" data-value="regulares">😐 Regulares</span>
+              <span class="encuesta__chip" data-group="precios" data-value="elevados">💸 Un poco elevados</span>
+            </div>
+          </div>
 
-            <div class="encuesta__intro">
-              <h3>&#128172; Queremos conocerte mejor</h3>
-              <p>Tus respuestas nos ayudan a mejorar. Son r&aacute;pidas y an&oacute;nimas.</p>
+          <!-- Pregunta 2 -->
+          <div class="encuesta__item">
+            <p class="encuesta__question">
+              <span class="encuesta__question-num">2</span>
+              ¿Cómo ha sido tu experiencia con nosotros?
+            </p>
+            <div class="encuesta__options">
+              <span class="encuesta__chip" data-group="experiencia" data-value="excelente">🌟 Excelente</span>
+              <span class="encuesta__chip" data-group="experiencia" data-value="buena">😊 Buena</span>
+              <span class="encuesta__chip" data-group="experiencia" data-value="regular">😐 Regular</span>
+              <span class="encuesta__chip" data-group="experiencia" data-value="mejorable">🔧 Mejorable</span>
+              <span class="encuesta__chip" data-group="experiencia" data-value="primera_vez">🆕 Es mi primera vez</span>
+            </div>
+          </div>
+
+          <!-- Pregunta 3 -->
+          <div class="encuesta__item">
+            <p class="encuesta__question">
+              <span class="encuesta__question-num">3</span>
+              ¿Has realizado alguna compra con nosotros?
+            </p>
+            <div class="encuesta__options">
+              <span class="encuesta__chip" data-group="compra" data-value="si_varias">📚 Sí, varias veces</span>
+              <span class="encuesta__chip" data-group="compra" data-value="si_una">✅ Sí, una vez</span>
+              <span class="encuesta__chip" data-group="compra" data-value="no_pronto">⏳ No, pero pronto</span>
+              <span class="encuesta__chip" data-group="compra" data-value="no_explorando">🔍 Solo estoy explorando</span>
+            </div>
+          </div>
+
+          <!-- Pregunta 4 -->
+          <div class="encuesta__item">
+            <p class="encuesta__question">
+              <span class="encuesta__question-num">4</span>
+              ¿Qué te parece nuestro plan de financiamiento?
+            </p>
+            <div class="encuesta__options">
+              <span class="encuesta__chip" data-group="financiamiento" data-value="excelente">🏆 Excelente opción</span>
+              <span class="encuesta__chip" data-group="financiamiento" data-value="bueno">👌 Bueno</span>
+              <span class="encuesta__chip" data-group="financiamiento" data-value="mejorar_cuotas">📅 Podrían dar más cuotas</span>
+              <span class="encuesta__chip" data-group="financiamiento" data-value="no_conozco">❓ No lo conocía</span>
+            </div>
+          </div>
+
+          <!-- Pregunta 5 — texto libre -->
+          <div class="encuesta__item">
+            <p class="encuesta__question">
+              <span class="encuesta__question-num">5</span>
+              ¿Algo en lo que piensas que podríamos mejorar? <em style="font-weight:400;color:var(--text-light)">(Opcional)</em>
+            </p>
+            <textarea
+              id="encuestaSugerencia"
+              class="encuesta__textarea"
+              placeholder="Cuéntanos tu sugerencia o comentario..."
+              maxlength="300"
+            ></textarea>
+          </div>
+
+        </div>
+
+        <div class="encuesta__next">
+          <button type="button" class="btn btn--primary" id="btnContinuar">
+            Continuar &rarr;
+          </button>
+        </div>
+
+      </div><!-- /panelEncuesta -->
+
+
+      <!-- ══ PASO 2 — Datos del cliente ══ -->
+      <div class="form-panel" id="panelDatos">
+
+        <form id="clienteForm">
+          <input type="hidden" id="clienteId" />
+
+          <div class="form__grid">
+
+            <div class="form__group">
+              <label for="codigo">Código</label>
+              <input type="text" id="codigo" name="codigo" placeholder="CL-001" required />
             </div>
 
-            <div class="encuesta__list">
-
-              <div class="encuesta__item">
-                <p class="encuesta__question">
-                  <span class="encuesta__question-num">1</span>
-                  &iquest;Qu&eacute; te parecen los precios de nuestras Biblias?
-                </p>
-                <div class="encuesta__options">
-                  <span class="encuesta__chip" data-group="precios" data-value="muy_accesibles">&#128522; Muy accesibles</span>
-                  <span class="encuesta__chip" data-group="precios" data-value="accesibles">&#128077; Accesibles</span>
-                  <span class="encuesta__chip" data-group="precios" data-value="regulares">&#128528; Regulares</span>
-                  <span class="encuesta__chip" data-group="precios" data-value="elevados">&#128184; Un poco elevados</span>
-                </div>
-              </div>
-
-              <div class="encuesta__item">
-                <p class="encuesta__question">
-                  <span class="encuesta__question-num">2</span>
-                  &iquest;C&oacute;mo ha sido tu experiencia con nosotros?
-                </p>
-                <div class="encuesta__options">
-                  <span class="encuesta__chip" data-group="experiencia" data-value="excelente">&#127775; Excelente</span>
-                  <span class="encuesta__chip" data-group="experiencia" data-value="buena">&#128522; Buena</span>
-                  <span class="encuesta__chip" data-group="experiencia" data-value="regular">&#128528; Regular</span>
-                  <span class="encuesta__chip" data-group="experiencia" data-value="mejorable">&#128295; Mejorable</span>
-                  <span class="encuesta__chip" data-group="experiencia" data-value="primera_vez">&#128220; Es mi primera vez</span>
-                </div>
-              </div>
-
-              <div class="encuesta__item">
-                <p class="encuesta__question">
-                  <span class="encuesta__question-num">3</span>
-                  &iquest;Has realizado alguna compra con nosotros?
-                </p>
-                <div class="encuesta__options">
-                  <span class="encuesta__chip" data-group="compra" data-value="si_varias">&#128218; S&iacute;, varias veces</span>
-                  <span class="encuesta__chip" data-group="compra" data-value="si_una">&#10003; S&iacute;, una vez</span>
-                  <span class="encuesta__chip" data-group="compra" data-value="no_pronto">&#9203; No, pero pronto</span>
-                  <span class="encuesta__chip" data-group="compra" data-value="no_explorando">&#128269; Solo estoy explorando</span>
-                </div>
-              </div>
-
-              <div class="encuesta__item">
-                <p class="encuesta__question">
-                  <span class="encuesta__question-num">4</span>
-                  &iquest;Qu&eacute; te parece nuestro plan de financiamiento?
-                </p>
-                <div class="encuesta__options">
-                  <span class="encuesta__chip" data-group="financiamiento" data-value="excelente">&#127942; Excelente opci&oacute;n</span>
-                  <span class="encuesta__chip" data-group="financiamiento" data-value="bueno">&#128076; Bueno</span>
-                  <span class="encuesta__chip" data-group="financiamiento" data-value="mejorar_cuotas">&#128197; Podr&iacute;an dar m&aacute;s cuotas</span>
-                  <span class="encuesta__chip" data-group="financiamiento" data-value="no_conozco">&#10067; No lo conoc&iacute;a</span>
-                </div>
-              </div>
-
-              <div class="encuesta__item">
-                <p class="encuesta__question">
-                  <span class="encuesta__question-num">5</span>
-                  &iquest;Algo en lo que piensas que podr&iacute;amos mejorar?
-                  <em style="font-weight:400;color:var(--text-light);font-size:0.8rem;">(Opcional)</em>
-                </p>
-                <textarea
-                  id="encuestaSugerencia"
-                  class="encuesta__textarea"
-                  placeholder="Cu&eacute;ntanos tu sugerencia o comentario..."
-                  maxlength="300"
-                ></textarea>
-              </div>
-
+            <div class="form__group">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Juan" required />
             </div>
 
-            <div class="encuesta__next">
-              <button type="button" class="btn btn--primary" id="btnContinuar">
-                Continuar &#8594;
-              </button>
+            <div class="form__group">
+              <label for="apellido">Apellido</label>
+              <input type="text" id="apellido" name="apellido" placeholder="Pérez" required />
             </div>
 
-          </div><!-- /panelEncuesta -->
+            <div class="form__group">
+              <label for="edad">Edad</label>
+              <input type="number" id="edad" name="edad" min="1" max="120" placeholder="25" required />
+            </div>
+
+            <div class="form__group">
+              <label for="departamento">Departamento</label>
+              <select id="departamento" name="departamento" required>
+                <option value="">Seleccione un departamento</option>
+              </select>
+            </div>
+
+            <div class="form__group">
+              <label for="genero">Sexo</label>
+              <select id="genero" name="genero" required>
+                <option value="">Seleccione</option>
+                <option value="M">Masculino</option>
+                <option value="F">Femenino</option>
+              </select>
+            </div>
+
+          </div>
+
+          <div class="form__actions">
+            <button type="button" class="btn--back" id="btnVolver">
+              &larr; Volver
+            </button>
+            <button type="submit" class="btn btn--primary">
+              Guardar Cliente ✓
+            </button>
+          </div>
+
+        </form>
+
+      </div><!-- /panelDatos -->
+
+    </div><!-- /clientes__card -->
+  </div>
+</section>
 
 
-          <!-- PASO 2 — Datos del cliente -->
-          <div class="form-panel" id="panelDatos">
 
-            <form id="clienteForm">
-              <input type="hidden" id="clienteId" />
-
-              <div class="form__grid">
-
-                <div class="form__group">
-                  <label for="codigo">C&oacute;digo</label>
-                  <input type="text" id="codigo" name="codigo" placeholder="CL-001" required />
-                </div>
-
-                <div class="form__group">
-                  <label for="nombre">Nombre</label>
-                  <input type="text" id="nombre" name="nombre" placeholder="Juan" required />
-                </div>
-
-                <div class="form__group">
-                  <label for="apellido">Apellido</label>
-                  <input type="text" id="apellido" name="apellido" placeholder="P&eacute;rez" required />
-                </div>
-
-                <div class="form__group">
-                  <label for="edad">Edad</label>
-                  <input type="number" id="edad" name="edad" min="1" max="120" placeholder="25" required />
-                </div>
-
-                <div class="form__group">
-                  <label for="departamento">Departamento</label>
-                  <select id="departamento" name="departamento" required>
-                    <option value="">Seleccione un departamento</option>
-                  </select>
-                </div>
-
-                <div class="form__group">
-                  <label for="genero">Sexo</label>
-                  <select id="genero" name="genero" required>
-                    <option value="">Seleccione</option>
-                    <option value="M">Masculino</option>
-                    <option value="F">Femenino</option>
-                  </select>
-                </div>
-
-              </div>
-
-              <div class="form__actions">
-                <button type="button" class="btn--back" id="btnVolver">
-                  &#8592; Volver
-                </button>
-                <button type="submit" class="btn btn--primary">
-                  Guardar Cliente &#10003;
-                </button>
-              </div>
-
-            </form>
-
-          </div><!-- /panelDatos -->
-
-        </div><!-- /clientes__card -->
-      </div>
-    </section>
-
-
-    <!-- ══════════════════════════════════════
-         REDES SOCIALES
-    ══════════════════════════════════════ -->
+    <!-- REDES SOCIALES -->
     <section class="section redes" id="redes">
       <div class="section__inner">
         <span class="section__label reveal" style="text-align:center;display:block;">&#8212; S&iacute;guenos</span>
         <h2 class="section__title reveal" style="text-align:center;">&#218;nete a nuestra<br /><em>comunidad digital.</em></h2>
         <p class="redes__desc reveal">Comparte tus lecturas, descubre novedades y forma parte de una comunidad apasionada por los libros. Estamos en todas las plataformas.</p>
-
         <div class="redes__grid reveal">
 
           <a href="https://www.facebook.com/people/Grupo-SABER/61585523433023/" target="_blank" rel="noopener" class="red__card red__card--fb">
@@ -577,7 +582,7 @@
             </div>
             <div class="red__info">
               <span class="red__name">WhatsApp</span>
-              <span class="red__handle">+505 7887 5960</span>
+              <span class="red__handle">+505 78875960</span>
             </div>
             <span class="red__badge red__badge--active">Activo</span>
             <span class="red__arrow">&#8594;</span>
@@ -589,72 +594,44 @@
 
   </main>
 
-
-  <!-- ══════════════════════════════════════
-       FOOTER
-  ══════════════════════════════════════ -->
   <footer class="footer">
     <div class="footer__inner">
-
       <div class="footer__brand">
-        <img src="Image/LogoEMundo.png" alt="Ediciones Mundo" class="navbar__logo-img" style="height:42px;" />
+        <div class="footer__logo-slot"><span class="footer__logo-text">EM</span></div>
         <div>
           <p class="footer__name">Ediciones Mundo</p>
           <p class="footer__tagline">El conocimiento a tu alcance</p>
         </div>
       </div>
-
       <nav class="footer__links">
         <a href="#nosotros">Nosotros</a>
         <a href="#mision">Visi&oacute;n y Misi&oacute;n</a>
         <a href="#valores">Valores</a>
         <a href="#informacion">Informaci&oacute;n</a>
       </nav>
-
       <div class="footer__copy">
         <p>&copy; 2025 Ediciones Mundo. Todos los derechos reservados.</p>
         <p>Centroam&eacute;rica</p>
       </div>
-
     </div>
   </footer>
 
 
-  <!-- ══════════════════════════════════════
-       BTN FLOTANTE IZQUIERDO — Registrarme
-  ══════════════════════════════════════ -->
-  <div class="registro-wrap">
-    <a href="#cliente" class="btn-registro" id="btnFloatRegistro">
-      <span class="btn-registro__icon">&#128221;</span>
-      <span>Registrarme</span>
-    </a>
+
+  <!-- Botón flotante Ver Catálogo -->
+<div class="catalogo-wrap">
+
   </div>
 
+  <!-- Botón flotante -->
+  <a href="DashboardCatalago.html" class="btn-catalogo" target="_blank">
+    <span class="btn-catalogo__icon">📚</span>
+    <span class="btn-catalogo__text">Ver Catálogo</span>
+  </a>
 
-  <!-- ══════════════════════════════════════
-       BTN FLOTANTE DERECHO — Ver Catálogo
-  ══════════════════════════════════════ -->
-  <div class="catalogo-wrap">
-    <div class="catalogo__bubble">
-      <p>&#128172; &iquest;Qu&eacute; est&aacute;s buscando?</p>
-      <ul>
-        <li>&#128214; Quiero ver los estilos de Biblia</li>
-        <li>&#128176; &iquest;Cu&aacute;les ser&aacute;n los precios?</li>
-        <li>&#129309; &iquest;Qu&eacute; tipo de financiamiento ofrecen?</li>
-      </ul>
-      <div class="catalogo__bubble-tail"></div>
-    </div>
-    <a href="DashboardCatalago.html" class="btn-catalogo" target="_blank">
-      <span class="btn-catalogo__icon">&#128218;</span>
-      <span class="btn-catalogo__text">Ver Cat&aacute;logo</span>
-    </a>
-  </div>
-
-
-  <!-- Scripts -->
-  <script src="main.js"></script>
-  <script src="splash.js"></script>
-  <script src="clientes.js"></script>
-
+</div>
+<script src="splash.js"></script>
+<script src="Main.js"></script>
+<script src="clientes.js"></script>
 </body>
-</html>
+</html> 

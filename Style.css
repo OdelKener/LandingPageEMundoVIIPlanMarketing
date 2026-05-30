@@ -158,7 +158,7 @@ a { text-decoration: none; color: inherit; }
   border: 1.5px solid rgba(255,255,255,.35);
   border-radius: var(--radius);
   display: flex; align-items: center; justify-content: center;
-  background-image: url('image/logo-emundo.png');
+  background-image: url('Image/LogoEMundo.png');
   background-size: cover;
 }
 
@@ -236,7 +236,7 @@ a { text-decoration: none; color: inherit; }
   align-items: center;
   padding-top: var(--nav-h);
   /* Gradiente de respaldo hasta que se coloque la imagen */
-  background-image: url('image/portada-emundo.jpg');
+  background-image: url('Image/Portada_EMundo.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
