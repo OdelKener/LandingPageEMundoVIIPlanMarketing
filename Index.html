@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,900;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="splash.css" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="clientes.css" />
+
 </head>
 <body>
 
@@ -18,9 +20,8 @@
 
     <!-- círculo -->
     <div class="splash-ring">
-      <div class="splash-logo"></div>
-    </div>
-
+      <div class="splash-logo">EMundo</div>
+  
     <!-- textos -->
     <h1 class="splash-title"></h1>
 
@@ -231,6 +232,94 @@
           </div>
         </div>
 
+        <!--FORMULARIO DE CLIENTES-->
+    <section id="cliente" class="section section--clientes reveal">
+  <div class="section__inner">
+
+    <header class="section__header reveal">
+      <h2 class="section__title">Registro de Clientes</h2>
+      <p class="section__subtitle">
+        Complete la información para registrar un nuevo cliente
+      </p>
+    </header>
+
+    <form id="clienteForm" class="clientes__form reveal">
+
+       <!-- ID oculto para editar -->
+      <input type="hidden" id="clienteId">
+
+      <div class="form__grid">
+
+        <div class="form__group">
+          <label for="codigo">Código</label>
+          <input type="text" id="codigo" name="codigo" placeholder="CL-001" required>
+        </div>
+
+        <div class="form__group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Juan" required>
+        </div>
+
+        <div class="form__group">
+          <label for="apellido">Apellido</label>
+          <input type="text" id="apellido" name="apellido" placeholder="Pérez" required>
+        </div>
+
+        <div class="form__group">
+          <label for="edad">Edad</label>
+          <input type="number" id="edad" name="edad" min="1" max="120" required>
+        </div>
+
+        <div class="form__group">
+          <label for="departamento">Departamento</label>
+          <select id="departamento" name="departamento" required>
+            <option value="">Seleccione un departamento</option>
+          </select>
+        </div>
+
+        <div class="form__group">
+          <label for="genero">Sexo</label>
+          <select id="genero" name="genero" required>
+            <option value="">Seleccione</option>
+            <option value="M">Masculino</option>
+            <option value="F">Femenino</option>
+          </select>
+        </div>
+
+      </div>
+
+      <!-- ─── PREGUNTAS FANTASMA (NO SE GUARDAN EN BD) ─── -->
+      <div class="form__group form__group--fantasma">
+        <label for="fantasma_origen">¿Cómo conoció Ediciones Mundo?</label>
+        <input
+          type="text"
+          id="fantasma_origen"
+          placeholder="Ej: redes sociales, recomendación, feria del libro"
+          required>
+      </div>
+
+
+      <div class="form__group form__group--fantasma">
+        <label for="fantasma_interes">¿Qué tipo de libros le interesan más?</label>
+        <input
+          type="text"
+          id="fantasma_interes"
+          placeholder="Ej: educativos, religiosos, literatura"
+          required>
+      </div>
+
+
+
+      <div class="form__actions">
+        <button type="submit" class="btn btn--primary">
+          Guardar Cliente
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+
         <div class="sedes__grid">
 
           <!-- Nicaragua -->
@@ -426,5 +515,7 @@
 </div>
  <script src="main.js"></script>
  <script src="splash.js"></script>
+ <script src="clientes.js"></script>
+
 </body>
 </html> 
